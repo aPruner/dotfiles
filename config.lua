@@ -12,6 +12,7 @@ lvim.keys.normal_mode["<S-Tab>"] = ":bprev<CR>"
 lvim.keys.normal_mode["<leader>t"] = ":TroubleToggle<CR>"
 lvim.keys.normal_mode["<C-S-Right>"] = ":vertical resize +10<CR>"
 lvim.keys.normal_mode["<C-S-Left>"] = ":vertical resize -10<CR>"
+lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 
 -- User Plugins
 lvim.plugins = {
@@ -21,6 +22,16 @@ lvim.plugins = {
   },
   {
     "sitiom/nvim-numbertoggle"
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
   }
 }
 
