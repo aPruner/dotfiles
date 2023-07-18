@@ -37,6 +37,8 @@ lvim.plugins = {
 }
 
 -- Core Plugin configs
+
+-- Gitsigns
 lvim.builtin.gitsigns.opts = {
   signs = {
     add = { text = '+' },
