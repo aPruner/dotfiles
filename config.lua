@@ -56,7 +56,11 @@ lvim.builtin.gitsigns.opts = {
 
 -- LSP-specific configs
 local lspconfig = require "lspconfig"
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver", "flow" })
+-- TODO: Add flow to the list_extend call in order to configure it manually
+-- TODO: Also maybe find another way to disable tsserver javascript validation, instead
+-- of totally disabling it for JS projects. That way, I will still be able to use autocomplete
+-- and some other nice features of ts in js/flow projects.
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
 
 -- Flow config
 -- So far, it seems as though this code should work to configure flow for .js and .jsx files
