@@ -22,7 +22,7 @@ local tsserver_opts = {
     init_options = {
       hostInfo = "neovim"
     },
-    root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json", ".git"),
+    root_dir = lspconfig.util.root_pattern("tsconfig.json"),
     single_file_support = true
   }
 }
