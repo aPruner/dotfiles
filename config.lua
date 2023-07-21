@@ -53,38 +53,3 @@ lvim.builtin.gitsigns.opts = {
     vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
   end,
 }
-
--- LSP-specific configs
-local lspconfig = require "lspconfig"
--- TODO: Add flow to the list_extend call in order to configure it manually
--- TODO: Also maybe find another way to disable tsserver javascript validation, instead
--- of totally disabling it for JS projects. That way, I will still be able to use autocomplete
--- and some other nice features of ts in js/flow projects.
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
-
--- Flow config
--- So far, it seems as though this code should work to configure flow for .js and .jsx files
--- but it seems to crash when I run :so. Ideally I'd love to never touch flow but it's for work :(
--- TODO: Fix this stuff
--- local flow_opts = {
---   settings = {
---     cmd = { "npx", "--no-install", "flow", "lsp" },
---     filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
---     root_dir = lspconfig.util.root_pattern(".flowconfig")
---   },
--- }
--- require("lvim.lsp.manager").setup("flow", flow_opts)
-
--- tsserver config
-local tsserver_opts = {
-  settings = {
-    cmd = { "typescript-language-server", "--stdio" },
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-    init_options = {
-      hostInfo = "neovim"
-    },
-    root_dir = lspconfig.util.root_pattern("tsconfig.json"),
-    single_file_support = true
-  }
-}
-require("lvim.lsp.manager").setup("tsserver", tsserver_opts)
