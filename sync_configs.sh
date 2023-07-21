@@ -5,5 +5,5 @@ git pull
 cp config.lua ~/.config/lvim/config.lua
 # TODO: As the config grows and eventually I start splitting things out into more
 # separate folders/files, I should create a list and loop through it in this script
-cp -R ftplugin ~/.config/lvim
+# cp -R <dir_name> ~/.config/lvim
 lvim
