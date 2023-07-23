@@ -1,1 +1,1 @@
-cp -R ~/code/dotfiles/nvim-scratch/ ~/.config/nvim/
+cp -R ~/code/dotfiles/nvim-scratch/nvim ~/.config/nvim/
