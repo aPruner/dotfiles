@@ -217,7 +217,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  { import = 'custom.plugins' },
+  -- { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -240,6 +240,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- [[ Configure LSP ]]
 require("lsp")
 
+
+-- [[ Configure Telescope ]]
+require("telescope")
+
+-- [[ Configure Treesitter ]]
+require("treesitter")
+
+-- [[ Configure nvim-cmp ]]
+require("nvim-cmp")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
