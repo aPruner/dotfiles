@@ -98,7 +98,9 @@ require('lazy').setup({
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      style = "night"
+    }
   },
 
   -- Nvim-tree - file explorer
@@ -112,6 +114,31 @@ require('lazy').setup({
     config = function()
       require("nvim-tree").setup {}
     end,
+  },
+
+  -- ToggleTerm
+  {
+    "akinsho/toggleterm.nvim",
+    branch = "main",
+    config = function()
+      require("toggleterm").setup()
+    end,
+  },
+
+  -- Code context + Bufferline UI
+  {
+    "SmiteshP/nvim-navic",
+    config = function()
+      require("nvim-navic").setup()
+    end,
+  },
+
+  {
+    "akinsho/bufferline.nvim",
+    config = function()
+      require("bufferline").setup()
+    end,
+    branch = "main",
   },
 
   -- NOTE: This is where your plugins related to LSP can be installed.

@@ -8,12 +8,14 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- NvimTree keymaps
+-- NvimTree
 vim.keymap.set('n', '<leader>e', "<cmd>:NvimTreeToggle<CR>", {})
 
--- Map buffer switching
+-- Buffer management
 vim.keymap.set('n', '<Tab>', "<cmd>:bprev<CR>", {})
 vim.keymap.set('n', '<S-Tab>', "<cmd>:bnext<CR>", {})
+
+vim.keymap.set('n', '<S-x>', "<cmd>:bd<CR>", {})
 
 -- Window split switching
 vim.keymap.set('n', '<C-h>', "<cmd>:wincmd h<CR>", {silent = true})
