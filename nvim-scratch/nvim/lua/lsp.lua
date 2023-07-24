@@ -55,7 +55,7 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {
     diagnostics = {
-      ignoredCodes = { 8010 }
+      ignoredCodes = {8002, 8003, 8004, 8005, 8006, 8008, 8009, 8010, 8011, 8012, 8013, 8014, 8015, 8016}
     }
   },
 
