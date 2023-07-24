@@ -72,6 +72,35 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- NumberToggle
+  { "sitiom/nvim-numbertoggle" },
+
+  -- Nvim-surround
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  -- Colorscheme: TokyoNight
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
   -- Nvim-tree - file explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -219,6 +248,9 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
 }, {})
+
+-- Set colorscheme to TokyoNight:
+vim.cmd[[colorscheme tokyonight]]
 
 -- [[ Setting options ]]
 require("options")
