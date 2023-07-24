@@ -72,6 +72,17 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Lua utils library
+  'nvim-lua/plenary.nvim',
+
+  -- The NAME.. is ThePrimagen. Don't be a react andy, use neovim with HARPOON AND REWRITE IT IN RUST
+  {
+    "ThePrimeagen/harpoon"
+  },
+
+  -- DAP - Debug Adapter Protocol
+  'mfussenegger/nvim-dap',
+
   -- NumberToggle
   { "sitiom/nvim-numbertoggle" },
 
