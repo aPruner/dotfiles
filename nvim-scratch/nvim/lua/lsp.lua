@@ -53,7 +53,11 @@ local servers = {
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {
+    diagnostics = {
+      ignoredCodes = { 8010 }
+    }
+  },
 
   lua_ls = {
     Lua = {

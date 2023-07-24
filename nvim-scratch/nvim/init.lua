@@ -128,13 +128,7 @@ require('lazy').setup({
   },
 
   -- ToggleTerm
-  {
-    "akinsho/toggleterm.nvim",
-    branch = "main",
-    config = function()
-      require("toggleterm").setup()
-    end,
-  },
+  {'akinsho/toggleterm.nvim', version = "", opts = {}},
 
   -- Code context + Bufferline UI
   {
