@@ -186,6 +186,13 @@ require('lazy').setup({
     },
   },
 
+  -- Autopairs for characters
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',          opts = {} },
   {
